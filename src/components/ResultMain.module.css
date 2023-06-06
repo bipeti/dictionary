@@ -1,0 +1,45 @@
+.outerdiv {
+    flex-flow: row nowrap;
+    height: 70px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.innerdiv {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    width: auto;
+    justify-content: center;
+}
+
+.phonetic {
+    color: purple;
+    padding: 0px;
+}
+
+.play-button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(222, 191, 222);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.play-button::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 25px solid purple;
+    opacity: 0.5;
+}
+
+.play-button:hover::before {
+    opacity: 1;
+}

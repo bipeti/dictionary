@@ -1,0 +1,30 @@
+ul {
+    list-style-type: none;
+}
+
+h2 {
+    overflow: hidden;
+    /* text-align: center; */
+    padding: 1em 10px;
+}
+
+h2:before,
+h2:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 100%;
+}
+
+h2:before {
+    right: 0.5em;
+    margin-left: -100%;
+}
+
+h2:after {
+    left: 0.5em;
+    margin-right: -100%;
+}

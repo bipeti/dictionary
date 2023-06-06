@@ -1,0 +1,28 @@
+.search_field {
+    display: flex;
+    align-items: center;
+    width: 580px;
+    padding: 10px;
+}
+
+.search_field input {
+    border: none;
+    background-color: rgb(222, 191, 222);
+    border-radius: 8px;
+    padding: 10px;
+    height: 30px;
+    width: calc(100% - 20px);
+}
+
+.search_field button {
+    border: none;
+    justify-content: center;
+    margin-left: -40px;
+    height: 20px;
+    background-color: none;
+}
+
+.search_field img {
+    background-color: rgb(222, 191, 222);
+    height: 20px;
+}

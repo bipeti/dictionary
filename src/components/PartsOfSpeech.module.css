@@ -1,0 +1,21 @@
+.h3 {
+    color: gray;
+    margin-bottom: 0;
+    padding-left: 10px;
+}
+
+.ul {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+
+.example {
+    color: rgb(109, 106, 106);
+    margin: 0;
+    padding: 0;
+}
+
+.example:after,
+.example:before {
+    content: '"';
+}

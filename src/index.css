@@ -1,0 +1,28 @@
+:root,
+.light {
+    --BACKGROUND: white;
+    --TEXT-PRIMARY: black;
+    --TEXT-SECONDARY: royalblue;
+    --ACCENT: purple;
+    --FONT-FAMILY: "Raleway", sans-serif;
+}
+
+[data-theme="dark"],
+.dark {
+    --BACKGROUND: gray;
+    --TEXT-PRIMARY: white;
+    --TEXT-SECONDARY: grey;
+    --ACCENT: darkred;
+}
+
+[font-theme="Roboto"] {
+    --FONT-FAMILY: "Roboto", sans-serif;
+}
+
+[font-theme="Poppins"] {
+    --FONT-FAMILY: "Poppins", sans-serif;
+}
+
+[font-theme="Raleway"] {
+    --FONT-FAMILY: "Raleway", sans-serif;
+}
