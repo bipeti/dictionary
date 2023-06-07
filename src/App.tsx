@@ -48,11 +48,6 @@ function App() {
                 data-theme={`${theme.isDark ? "dark" : "light"}`}
                 font-theme={theme.fontType}
             >
-                {/* <main
-                className={`${theme.isDark ? classes.dark : classes.light} ${
-                    classes[theme.fontType]
-                } data-theme="dark"`}
-            > */}
                 <Header
                     onSwitchClick={themeHandler}
                     onFamilyChangeHandler={familyChangeHandler}

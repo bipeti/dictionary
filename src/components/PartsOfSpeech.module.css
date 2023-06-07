@@ -1,6 +1,6 @@
 .h3 {
-    color: gray;
-    margin-bottom: 0;
+    color: var(--TEXT-SECONDARY);
+    padding-bottom: 10px;
     padding-left: 10px;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .example {
-    color: rgb(109, 106, 106);
+    color: var(--TEXT-SECONDARY);
     margin: 0;
     padding: 0;
 }

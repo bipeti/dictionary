@@ -1,16 +1,17 @@
 .search_field {
     display: flex;
     align-items: center;
-    width: 580px;
+    /* width: 580px; */
     padding: 10px;
 }
 
 .search_field input {
     border: none;
-    background-color: rgb(222, 191, 222);
+    background-color: var(--INPUT-BACKGROUND);
     border-radius: 8px;
     padding: 10px;
     height: 30px;
+    font-size: large;
     width: calc(100% - 20px);
 }
 
@@ -23,6 +24,6 @@
 }
 
 .search_field img {
-    background-color: rgb(222, 191, 222);
+    background-color: var(--INPUT-BACKGROUND);
     height: 20px;
 }

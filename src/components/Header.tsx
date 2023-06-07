@@ -20,7 +20,7 @@ const Header = ({ onSwitchClick, onFamilyChangeHandler }: AppProps) => {
                 className={classes["header-icon"]}
             />
             <label className={classes["header-label-fonttype"]}>
-                <select onChange={onFamilyChangeHandler}>
+                <select id="family-change" onChange={onFamilyChangeHandler}>
                     <option value="Raleway">Raleway</option>
                     <option value="Roboto">Roboto</option>
                     <option value="Poppins">Poppins</option>

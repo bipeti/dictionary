@@ -1,18 +1,30 @@
 :root,
 .light {
     --BACKGROUND: white;
+    --INPUT-BACKGROUND: #debfde;
     --TEXT-PRIMARY: black;
-    --TEXT-SECONDARY: royalblue;
+    --TEXT-SECONDARY: #807e7e;
     --ACCENT: purple;
     --FONT-FAMILY: "Raleway", sans-serif;
+    --PLAY-BUTTON-COLOR: purple;
+    --BLACK-IMG-FILTER: brightness(1) invert(100%);
+    /* In the img's css the follows lines toggle the color
+       of the icon in light/dark mode:
+    mix-blend-mode: difference;
+    background-color: var(--BACKGROUND);
+    filter: var(--BLACK-IMG-FILTER);
+    */
 }
 
 [data-theme="dark"],
 .dark {
-    --BACKGROUND: gray;
-    --TEXT-PRIMARY: white;
-    --TEXT-SECONDARY: grey;
-    --ACCENT: darkred;
+    --BACKGROUND: #23272f;
+    --INPUT-BACKGROUND: #4d4f52;
+    --TEXT-PRIMARY: #f4f5f7;
+    --TEXT-SECONDARY: #8a8c91;
+    --ACCENT: #9e549e;
+    --PLAY-BUTTON-COLOR: #debfde;
+    --BLACK-IMG-FILTER: brightness(10) invert(100%);
 }
 
 [font-theme="Roboto"] {

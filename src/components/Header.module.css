@@ -1,32 +1,36 @@
 div {
-    display: inline-flex;
+    display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    width: 580px;
-    gap: 10px;
+    justify-content: space-between;
+    /* gap: 10px; */
     padding: 10px;
+    /* margin: auto; */
 }
 
 .header-icon {
     width: 80px;
     height: 80px;
+    mix-blend-mode: difference;
+    background-color: var(--BACKGROUND);
+    filter: var(--BLACK-IMG-FILTER);
 }
 
 .header-label-fonttype {
     margin-left: auto;
+    width: 80px;
 }
 
 .header-label-fonttype select {
-    background-color: none;
+    border: none;
 }
 
 .header-label-checkbox {
-    margin: 0 20px;
+    margin: 0 30px;
     width: 60px;
     height: 30px;
     position: relative;
     display: block;
-    background: #ebebeb;
     background: rgb(222, 191, 222);
     border-radius: 15px;
     cursor: pointer;
@@ -54,7 +58,8 @@ div {
 }
 
 .header-input-checkbox:checked + label {
-    background: #242424;
+    /* background: #242424; */
+    background: var(--INPUT-BACKGROUND);
 }
 
 .header-input-checkbox:checked + label:after {
@@ -74,15 +79,21 @@ div {
 
 .header-label-checkbox img {
     position: absolute;
-    width: 20px;
+    width: 24px;
     top: 4px;
     z-index: 100;
 }
 
 .header-label-checkbox img.sun {
-    left: -24px;
+    left: -28px;
+    mix-blend-mode: difference;
+    background-color: var(--BACKGROUND);
+    filter: var(--BLACK-IMG-FILTER);
 }
 
 .header-label-checkbox img.moon {
-    left: 64px;
+    left: 66px;
+    mix-blend-mode: difference;
+    background-color: var(--BACKGROUND);
+    filter: var(--BLACK-IMG-FILTER);
 }
