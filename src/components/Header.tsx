@@ -30,7 +30,7 @@ const Header = ({ onSwitchClick, onFamilyChangeHandler }: AppProps) => {
                 type="checkbox"
                 id="darkmode-toggle"
                 className={classes["header-input-checkbox"]}
-                onClick={onSwitchClick}
+                onChange={onSwitchClick}
                 checked={theme.isDark}
             />
             <label

@@ -41,7 +41,6 @@ function App() {
             .then((response) => response.json())
             .then((response) => {
                 setSearchedWordResult(response);
-                console.log(response);
             })
             .catch((err) => setErrorMessage(err.message));
     }, []);
