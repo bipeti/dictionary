@@ -3,10 +3,10 @@ import Header from "./components/Header";
 import { ThemeContext, ThemeContextObj } from "./context/theme-context";
 import "./App.css";
 import Search from "./components/Search";
-import Result from "./components/Result";
-import NoWordFound from "./components/NoWordFound";
-import Error from "./components/Error";
-import Welcome from "./components/Welcome";
+import Result from "./components/Results/Result";
+import NoWordFound from "./components/InformationPages/NoWordFound";
+import Error from "./components/InformationPages/Error";
+import Welcome from "./components/InformationPages/Welcome";
 
 function App() {
     const [searchedWordResult, setSearchedWordResult] = useState();

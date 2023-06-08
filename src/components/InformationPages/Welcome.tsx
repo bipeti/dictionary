@@ -1,4 +1,4 @@
-import classes from "./Welcome.module.css";
+import classes from "./InformationPages.module.css";
 
 const Welcome = () => {
     return (

@@ -1,4 +1,4 @@
-import classes from "./Error.module.css";
+import classes from "./InformationPages.module.css";
 
 type ErrorProps = {
     message: string;
