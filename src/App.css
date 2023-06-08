@@ -10,6 +10,23 @@
     background-color: var(--BACKGROUND);
     color: var(--TEXT-PRIMARY);
     font-family: var(--FONT-FAMILY);
+    font-size: var(--FONT-SIZE);
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 0.9rem;
 }
 
 body {
@@ -17,11 +34,16 @@ body {
     justify-content: center;
 }
 
+div {
+    padding: var(--PADDING);
+}
+
 main {
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
     flex-flow: column nowrap;
+    width: calc(100vw - 2 * var(--PADDING));
     max-width: 640px;
     min-height: 100vh;
 }

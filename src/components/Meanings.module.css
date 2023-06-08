@@ -4,10 +4,9 @@ ul {
 
 h2 {
     overflow: hidden;
-    padding: 1em 10px;
+    padding: var(--PADDING);
 }
 
-h2:before,
 h2:after {
     background-color: #000;
     content: "";
@@ -16,11 +15,6 @@ h2:after {
     position: relative;
     vertical-align: middle;
     width: 100%;
-}
-
-h2:before {
-    right: 0.5em;
-    margin-left: -100%;
 }
 
 h2:after {

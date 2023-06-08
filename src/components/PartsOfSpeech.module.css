@@ -1,7 +1,6 @@
 .h3 {
     color: var(--TEXT-SECONDARY);
-    padding-bottom: 10px;
-    padding-left: 10px;
+    padding: var(--PADDING);
 }
 
 .ul {

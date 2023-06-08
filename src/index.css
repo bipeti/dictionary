@@ -1,5 +1,6 @@
 :root,
 .light {
+    /* ---COLORS--- */
     --BACKGROUND: white;
     --INPUT-BACKGROUND: #debfde;
     --TEXT-PRIMARY: black;
@@ -7,25 +8,27 @@
     --ACCENT: purple;
     --FONT-FAMILY: "Raleway", sans-serif;
     --PLAY-BUTTON-COLOR: purple;
-    --BLACK-IMG-FILTER: brightness(1) invert(100%);
+
     /* In the img's css the follows lines toggle the color
-       of the icon in light/dark mode:
+    of the icon in light/dark mode:
     mix-blend-mode: difference;
     background-color: var(--BACKGROUND);
     filter: var(--BLACK-IMG-FILTER);
     */
+    --BLACK-IMG-FILTER: brightness(1) invert(100%);
+
+    /* ---GENERAL--- */
+    --FONT-SIZE: calc(15px + 0.390625vw);
 }
 
-[data-theme="dark"],
-.dark {
-    --BACKGROUND: #23272f;
-    --INPUT-BACKGROUND: #4d4f52;
-    --TEXT-PRIMARY: #f4f5f7;
-    --TEXT-SECONDARY: #8a8c91;
-    --ACCENT: #9e549e;
-    --PLAY-BUTTON-COLOR: #debfde;
-    --BLACK-IMG-FILTER: brightness(10) invert(100%);
-}
+/*
+.dark && 
+    useEffect(() => {
+        document.body.className = theme.isDark ? "dark" : "light";
+    }, [theme.isDark]);
+    in App.tsx ensure not just main div, but all index.html will apply
+    these settings
+*/
 
 [font-theme="Roboto"] {
     --FONT-FAMILY: "Roboto", sans-serif;
@@ -37,4 +40,29 @@
 
 [font-theme="Raleway"] {
     --FONT-FAMILY: "Raleway", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    [data-theme="dark"],
+    .dark {
+        --BACKGROUND: #23272f;
+        --INPUT-BACKGROUND: #4d4f52;
+        --TEXT-PRIMARY: #f4f5f7;
+        --TEXT-SECONDARY: #8a8c91;
+        --ACCENT: #9e549e;
+        --PLAY-BUTTON-COLOR: #debfde;
+        --BLACK-IMG-FILTER: brightness(10) invert(100%);
+    }
+}
+
+/* Mobile */
+:root {
+    --PADDING: 14px;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+    :root {
+        --PADDING: 18px;
+    }
 }

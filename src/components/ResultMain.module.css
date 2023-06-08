@@ -1,4 +1,5 @@
 .outerdiv {
+    display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;
     justify-content: space-between;
@@ -7,7 +8,6 @@
 .innerdiv {
     flex-flow: column nowrap;
     align-items: flex-start;
-    width: auto;
     justify-content: center;
 }
 
@@ -23,6 +23,7 @@
     height: 50px;
     background-color: var(--INPUT-BACKGROUND);
     border-radius: 50%;
+    padding: 0;
     position: relative;
     cursor: pointer;
 }
@@ -30,8 +31,8 @@
 .play-button::before {
     content: "";
     position: absolute;
-    top: 20px;
-    left: 25px;
+    top: 10px;
+    left: 16px;
     width: 0;
     height: 0;
     border-top: 15px solid transparent;

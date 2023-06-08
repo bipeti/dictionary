@@ -2,15 +2,20 @@ import React, { useState, useEffect, useCallback } from "react";
 import Header from "./components/Header";
 import { ThemeContext, ThemeContextObj } from "./context/theme-context";
 import "./App.css";
-// import classes from "./App.module.css";
 import Search from "./components/Search";
 import Result from "./components/Result";
 import NoWordFound from "./components/NoWordFound";
+import Error from "./components/Error";
+import Welcome from "./components/Welcome";
 
 function App() {
     const [searchedWordResult, setSearchedWordResult] = useState();
+    const [errorMessage, setErrorMessage] = useState(null);
+    const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+    ).matches;
     const [theme, setTheme] = useState<ThemeContextObj>({
-        isDark: false,
+        isDark: prefersDark,
         fontType: "Raleway",
     });
 
@@ -32,10 +37,13 @@ function App() {
 
     const searchHandler = useCallback(async (word: string) => {
         let link = "https://api.dictionaryapi.dev/api/v2/entries/en/" + word;
-        const response = await fetch(link).then((response) => response.json());
-
-        setSearchedWordResult(response);
-        console.log(response);
+        await fetch(link)
+            .then((response) => response.json())
+            .then((response) => {
+                setSearchedWordResult(response);
+                console.log(response);
+            })
+            .catch((err) => setErrorMessage(err.message));
     }, []);
 
     useEffect(() => {
@@ -53,13 +61,18 @@ function App() {
                     onFamilyChangeHandler={familyChangeHandler}
                 />
                 <Search onSearch={searchHandler} />
-                {searchedWordResult && "message" in searchedWordResult && (
-                    <NoWordFound result={searchedWordResult} />
-                )}
-                {searchedWordResult && !("message" in searchedWordResult) && (
-                    <Result result={searchedWordResult} />
-                )}
-                {!searchedWordResult && "Welcome!"}
+                {errorMessage && <Error message={errorMessage} />}
+                {!errorMessage &&
+                    searchedWordResult &&
+                    "message" in searchedWordResult && (
+                        <NoWordFound result={searchedWordResult} />
+                    )}
+                {!errorMessage &&
+                    searchedWordResult &&
+                    !("message" in searchedWordResult) && (
+                        <Result result={searchedWordResult} />
+                    )}
+                {!errorMessage && !searchedWordResult && <Welcome />}
             </main>
         </ThemeContext.Provider>
     );

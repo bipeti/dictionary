@@ -1,18 +1,16 @@
 .search_field {
     display: flex;
     align-items: center;
-    /* width: 580px; */
-    padding: 10px;
+    padding: var(--PADDING);
 }
 
 .search_field input {
     border: none;
     background-color: var(--INPUT-BACKGROUND);
     border-radius: 8px;
-    padding: 10px;
-    height: 30px;
+    padding: var(--PADDING);
     font-size: large;
-    width: calc(100% - 20px);
+    width: calc(100% - calc(2 * var(--PADDING)));
 }
 
 .search_field button {

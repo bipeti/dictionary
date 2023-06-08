@@ -1,19 +1,17 @@
-div {
+.header {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
-    /* gap: 10px; */
-    padding: 10px;
-    /* margin: auto; */
 }
 
 .header-icon {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     mix-blend-mode: difference;
     background-color: var(--BACKGROUND);
     filter: var(--BLACK-IMG-FILTER);
+    padding-left: var(--PADDING);
 }
 
 .header-label-fonttype {
@@ -21,12 +19,14 @@ div {
     width: 80px;
 }
 
-.header-label-fonttype select {
+.header-label-fonttype select,
+.header-label-fonttype select option {
     border: none;
+    font-size: calc(0.8 * var(--FONT-SIZE));
 }
 
 .header-label-checkbox {
-    margin: 0 30px;
+    margin: 0 50px;
     width: 60px;
     height: 30px;
     position: relative;
@@ -43,7 +43,6 @@ div {
     position: absolute;
     top: 4px;
     left: 4px;
-    /* background: linear-gradient(180deg, #ffcc89, #d8860b); */
     background: linear-gradient(180deg, rgb(222, 200, 222), purple);
     border-radius: 11px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
@@ -58,14 +57,12 @@ div {
 }
 
 .header-input-checkbox:checked + label {
-    /* background: #242424; */
     background: var(--INPUT-BACKGROUND);
 }
 
 .header-input-checkbox:checked + label:after {
     left: 55px;
     transform: translateX(-100%);
-    /* background: linear-gradient(180deg, #777, #3a3a3a); */
 }
 
 .header-label-checkbox,

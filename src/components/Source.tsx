@@ -10,7 +10,7 @@ const Source = ({ sourceUrls }: SourceProps) => {
     }
 
     return (
-        <h5 className={classes.h5}>
+        <h4 className={classes.h4}>
             {"Source: "}
             {sourceUrls.map((url, i) => (
                 <a href={url} key={i} rel="noreferrer noopener" target="_blank">
@@ -18,7 +18,7 @@ const Source = ({ sourceUrls }: SourceProps) => {
                     <img src="external_link.png" alt="External Link"></img>
                 </a>
             ))}
-        </h5>
+        </h4>
     );
 };
 

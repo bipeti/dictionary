@@ -1,7 +1,7 @@
 h4 {
     margin-top: 20px;
-    padding-left: 10px;
+    padding-left: var(--PADDING);
 }
 p {
-    padding-left: 10px;
+    padding-left: var(--PADDING);
 }

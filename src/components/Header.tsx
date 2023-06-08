@@ -1,6 +1,6 @@
-// import { useContext } from "react";
+import { useContext } from "react";
 import classes from "./Header.module.css";
-// import { ThemeContext } from "../context/theme-context";
+import { ThemeContext } from "../context/theme-context";
 
 type AppProps = {
     onSwitchClick: () => void;
@@ -10,13 +10,13 @@ type AppProps = {
 };
 
 const Header = ({ onSwitchClick, onFamilyChangeHandler }: AppProps) => {
-    // const theme = useContext(ThemeContext);
+    const theme = useContext(ThemeContext);
 
     return (
         <div className={classes.header}>
             <img
                 alt="dictionary-icon"
-                src="dictionary.png"
+                src="dictionary.ico"
                 className={classes["header-icon"]}
             />
             <label className={classes["header-label-fonttype"]}>
@@ -31,6 +31,7 @@ const Header = ({ onSwitchClick, onFamilyChangeHandler }: AppProps) => {
                 id="darkmode-toggle"
                 className={classes["header-input-checkbox"]}
                 onClick={onSwitchClick}
+                checked={theme.isDark}
             />
             <label
                 htmlFor="darkmode-toggle"

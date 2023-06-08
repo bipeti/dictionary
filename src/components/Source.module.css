@@ -1,9 +1,9 @@
-h5 {
+h4 {
     margin-top: 20px;
-    padding: 10px;
+    padding: var(--PADDING);
 }
 
-h5 img {
+h4 img {
     width: 20px;
     position: relative;
     padding-left: 4px;
@@ -11,4 +11,8 @@ h5 img {
     mix-blend-mode: difference;
     background-color: var(--BACKGROUND);
     filter: var(--BLACK-IMG-FILTER);
+}
+
+h4 a {
+    font-weight: 100;
 }
