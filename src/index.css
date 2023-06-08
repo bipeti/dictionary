@@ -21,15 +21,6 @@
     --FONT-SIZE: calc(15px + 0.390625vw);
 }
 
-/*
-.dark && 
-    useEffect(() => {
-        document.body.className = theme.isDark ? "dark" : "light";
-    }, [theme.isDark]);
-    in App.tsx ensure not just main div, but all index.html will apply
-    these settings
-*/
-
 [font-theme="Roboto"] {
     --FONT-FAMILY: "Roboto", sans-serif;
 }
@@ -42,17 +33,25 @@
     --FONT-FAMILY: "Raleway", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-    [data-theme="dark"],
-    .dark {
-        --BACKGROUND: #23272f;
-        --INPUT-BACKGROUND: #4d4f52;
-        --TEXT-PRIMARY: #f4f5f7;
-        --TEXT-SECONDARY: #8a8c91;
-        --ACCENT: #9e549e;
-        --PLAY-BUTTON-COLOR: #debfde;
-        --BLACK-IMG-FILTER: brightness(10) invert(100%);
-    }
+[data-theme="dark"],
+.dark {
+    /*
+    ->  .dark  <-  
+        && 
+        useEffect(() => {
+            document.body.className = theme.isDark ? "dark" : "light";
+        }, [theme.isDark]);
+        in App.tsx ensure not just "main" div, but all index.html will apply
+        these settings
+    */
+
+    --BACKGROUND: #23272f;
+    --INPUT-BACKGROUND: #4d4f52;
+    --TEXT-PRIMARY: #f4f5f7;
+    --TEXT-SECONDARY: #8a8c91;
+    --ACCENT: #9e549e;
+    --PLAY-BUTTON-COLOR: #debfde;
+    --BLACK-IMG-FILTER: brightness(10) invert(100%);
 }
 
 /* Mobile */
