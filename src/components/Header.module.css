@@ -23,6 +23,7 @@
 .header-label-fonttype select option {
     border: none;
     font-size: calc(0.8 * var(--FONT-SIZE));
+    cursor: pointer;
 }
 
 .header-label-checkbox {
