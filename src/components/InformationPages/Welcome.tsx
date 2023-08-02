@@ -16,6 +16,9 @@ const Welcome = () => {
                 </a>{" "}
                 to create this app.
             </p>
+            <p>
+                Try it with the "keyboard" word, for example, or anything else.
+            </p>
         </>
     );
 };
